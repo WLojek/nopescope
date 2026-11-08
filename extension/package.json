@@ -1,0 +1,28 @@
+{
+  "name": "nopescope",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "test": "node test/rules.test.mjs && node test/adapters.test.mjs",
+    "test:e2e": "node test/e2e.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@huggingface/tokenizers": "^0.2.0",
+    "onnxruntime-web": "^1.31.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.65.0"
+  },
+  "description": "Say nope to topics, people and languages on any website. Local AI, nothing leaves your computer.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WLojek/nopescope"
+  },
+  "homepage": "https://github.com/WLojek/nopescope"
+}

@@ -1,0 +1,38 @@
+/* Nopescope: states on page elements plus the light-DOM hosts of the UI (<nope-cover>, <nope-bar>).
+   The pill, panel and curtain styles live inside their closed shadow roots (overlay.js). */
+
+/* pending: the model is deciding */
+[data-nope-state="pending"] { pointer-events: none !important; color: transparent !important; text-shadow: 0 0 7px rgba(128, 128, 128, .8) !important; }
+[data-nope-state="pending"] > *:not(nope-cover) { filter: blur(7px) saturate(.6) !important; transition: filter 120ms ease; }
+
+/* blur: children (images, cards) and the glyphs themselves (text nodes directly inside the item) */
+[data-nope-state="blur"] { color: transparent !important; text-shadow: 0 0 12px rgba(128, 128, 128, .85) !important; }
+[data-nope-state="blur"] > *:not(nope-cover) { filter: blur(16px) saturate(.4) !important; pointer-events: none !important; user-select: none !important; }
+[data-nope-state="blur"]:has(> nope-cover) { overflow: hidden !important; }
+
+/* collapse */
+[data-nope-state="hide"] { display: none !important; }
+
+/* hosts that render through their own shadow root (e.g. Reddit's custom elements): blur the host itself */
+nope-bar + [data-nope-state="blur"],
+:is(shreddit-post, shreddit-comment)[data-nope-state="blur"] { filter: blur(16px) saturate(.4) !important; pointer-events: none !important; user-select: none !important; }
+:is(shreddit-post, shreddit-comment)[data-nope-state="pending"] { filter: blur(7px) saturate(.6) !important; }
+
+/* images and video posters */
+img[data-nope-state="blur"], video[data-nope-state="blur"] { filter: blur(28px) saturate(.4) !important; }
+
+/* UI hosts */
+nope-cover {
+  position: absolute !important; inset: 0 !important; z-index: 2147483000 !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  background: rgba(10, 12, 16, .18) !important; pointer-events: none !important; filter: none !important;
+  text-shadow: none !important; container-type: inline-size !important; margin: 0 !important; padding: 0 !important;
+}
+nope-cover.media { background: transparent !important; overflow: hidden !important; }
+nope-bar {
+  display: flex !important; justify-content: center !important; margin: 6px 0 !important; filter: none !important;
+  text-shadow: none !important; container-type: inline-size !important;
+}
+nope-pill { pointer-events: auto !important; filter: none !important; }
+html.nope-curtained, html.nope-curtained body { overflow: hidden !important; }
+@media (prefers-color-scheme: light) { nope-cover { background: rgba(255, 255, 255, .12) !important; } nope-cover.media { background: transparent !important; } }

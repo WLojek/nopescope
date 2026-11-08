@@ -1,0 +1,30 @@
+Nopescope
+Copyright 2026 The Nopescope authors
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes or loads third-party components with their own licenses:
+
+Model weights (not in this repository and not in the extension package: downloaded on first run from
+Hugging Face, pinned to a commit and checked by SHA-256)
+- Basal decision models: basal-omni-pico and basal-2.0-mini, by Remigiusz Kinas.
+  Apache-2.0. https://huggingface.co/Remek, https://github.com/rkinas/basal
+  The ONNX int4 conversions used by Nopescope are published at
+  https://huggingface.co/WLojek/basal-2.0-mini-onnx-web and https://huggingface.co/WLojek/basal-omni-pico-onnx-web
+  (Apache-2.0, converted with basal-web/scripts/export.py).
+  - basal-omni-pico is fine-tuned from Qwen3.5-0.8B-Base (Qwen team, Apache-2.0).
+  - basal-2.0-mini is fine-tuned from Bielik-1.5B-v3 (SpeakLeash, Apache-2.0).
+- MobileCLIP-S0, by Apple. The ONNX conversion is Xenova/mobileclip_s0.
+  The model card lists the Apple Machine Learning Research Model License (apple-amlr):
+  https://huggingface.co/apple/MobileCLIP-S0
+  Nopescope does not redistribute these weights. The user's browser downloads them from
+  https://huggingface.co/Xenova/mobileclip_s0.
+
+Code
+- onnxruntime-web, Microsoft. MIT License.
+- @huggingface/tokenizers (tokenizers.js), Hugging Face. Apache-2.0.
+- basal-web/test/format2_vectors.jsonl is copied from rkinas/basal (docs/format2_vectors.jsonl). Apache-2.0.
+- The basal prompt format and calibration logic are reimplemented from rkinas/basal docs/FORMAT2.md (Apache-2.0).
+
+Nopescope is an independent project. It is not affiliated with or endorsed by Remigiusz Kinas, Apple,
+Microsoft, Hugging Face, Rockstar Games or Take-Two Interactive. "GTA" and "Grand Theft Auto" are
+trademarks of Take-Two Interactive.

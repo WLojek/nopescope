@@ -1,0 +1,13 @@
+{
+  "_comment": "int4 -> fp32 yes/no logit corrections (logit_ref = a * logit_int4 + b), fitted with scripts/fit_correction.py on eval/gta6_spoilers.jsonl + eval/politics.jsonl (380 texts, no labels used). export.py writes them into basal-web.json.",
+  "basal-omni-pico": {
+    "a": 1.00291,
+    "b": -0.09942,
+    "n": 380
+  },
+  "basal-2.0-mini": {
+    "a": 0.95919,
+    "b": -1.69955,
+    "n": 380
+  }
+}

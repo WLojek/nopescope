@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nopescope rulebook</title>
+<link rel="stylesheet" href="ui.css">
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <img class="logo" src="icons/48.png" alt="">
+    <h1>Nopescope <span class="muted">rulebook</span></h1>
+    <label class="master"><span id="masterText">On</span><span id="masterSlot"></span></label>
+  </div>
+</header>
+<div class="shell">
+  <nav class="side" aria-label="Sections">
+    <a href="#packs">Packs</a>
+    <a href="#rules">My rules</a>
+    <a href="#sites">Sites</a>
+    <a href="#model">Local model</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#about">About</a>
+  </nav>
+  <main>
+    <section id="packs"><h2><i></i>Packs</h2><p class="lede">Ready-made rules. Turn one on and it appears in My rules, where you can edit it.</p><div id="packList" class="packs"></div></section>
+
+    <section id="rules">
+      <h2><i></i>My rules</h2>
+      <div class="adders" id="adders"></div>
+      <label class="filter"><input id="siteFilter" type="text" placeholder="Show rules for site… e.g. bbc.co.uk" spellcheck="false" aria-label="Show rules for site"></label>
+      <div id="ruleList"></div>
+    </section>
+
+    <section id="sites"><h2><i></i>Sites</h2><p class="lede">Where Nopescope runs at all. Each rule can narrow this further.</p><div id="siteList" class="card"></div><p class="hint site-note">X, YouTube, Reddit and Google have dedicated support; other sites use automatic detection of posts, comments and paragraphs.</p></section>
+
+    <section id="model">
+      <h2><i></i>Local model</h2>
+      <div id="modelChoice" class="mchoice"></div>
+      <div class="card model">
+        <div class="model-head"><span id="mDot" class="dot"></span><b id="mState">Checking</b><span id="mDetail" class="muted"></span></div>
+        <div id="mBar" class="progress" hidden><i></i></div>
+        <p id="mNote" class="muted note" hidden></p>
+        <div class="model-actions"><button id="mLoad" class="btn primary">Load model</button></div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <h2><i></i>Feedback</h2>
+      <div class="card fb">
+        <div><span id="labelCount" class="mono big">0</span><span class="muted"> labels saved on this device</span><p class="muted note">Created when you press &ldquo;Not &lt;label&gt;&rdquo; on a hidden item.</p></div>
+        <button id="export" class="btn">Export labels (JSON)</button>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2><i></i>About</h2>
+      <p class="about">Text is checked by <b>Basal</b> decision models by Remigiusz Kinas (Apache-2.0), images by Apple's <b>MobileCLIP-S0</b>. Both run locally on your GPU through WebGPU. Nothing you browse leaves your computer. Open source under Apache-2.0.</p>
+    </section>
+  </main>
+</div>
+<script type="module" src="options.js"></script>
+</body>
+</html>

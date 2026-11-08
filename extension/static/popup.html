@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nopescope</title>
+<link rel="stylesheet" href="ui.css">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main id="app">
+  <header class="top">
+    <img class="logo" src="icons/48.png" alt="">
+    <div class="brand"><b>Nopescope</b><span id="masterLabel" class="muted"></span></div>
+    <span id="masterSlot"></span>
+  </header>
+  <section id="siteRow" class="row"></section>
+  <section class="today">
+    <div class="count"><span id="total" class="mono">0</span><span class="muted">hidden today</span></div>
+    <ul id="perRule" class="per"></ul>
+    <p id="active" class="active muted"></p>
+  </section>
+  <form id="quick" class="quick" autocomplete="off">
+    <div class="qrow"><input id="quickInput" type="text" placeholder="Nope a topic…" maxlength="80" aria-label="Topic to hide">
+    <button type="submit">Nope</button></div>
+    <div id="where" class="seg" role="group" hidden></div>
+  </form>
+  <footer class="foot">
+    <span id="modelDot" class="dot"></span><span id="modelText" class="muted"></span>
+    <a id="openOptions" href="#">Rules &rsaquo;</a>
+  </footer>
+</main>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

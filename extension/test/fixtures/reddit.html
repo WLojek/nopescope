@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<shreddit-app>
+<main>
+<shreddit-post post-title="Is the new patch worth it?" author="alice_r" permalink="/r/gaming/comments/abc123/is_the_new_patch_worth_it/" subreddit-prefixed-name="r/gaming" score="1234" comment-count="56" created-timestamp="2026-11-01T10:00:00Z">
+  <a slot="full-post-link" href="/r/gaming/comments/abc123/is_the_new_patch_worth_it/">link</a>
+  <div slot="credit-bar">u/alice_r 2 hr. ago <button>Join</button></div>
+  <h1 slot="title">Is the new patch worth it?</h1>
+  <div slot="text-body"><div class="md"><p>I have been playing for 200 hours and wonder whether to upgrade.</p><p>Thoughts?</p></div></div>
+  <div slot="post-media-container"></div>
+  <div slot="actions"><button>Share</button><button>Award</button><faceplate-number number="1234">1.2K</faceplate-number></div>
+</shreddit-post>
+<shreddit-post post-title="Link only post" author="BobTheLinker" permalink="/r/gaming/comments/def456/link_only_post/">
+  <h1 slot="title">Link only post</h1><div slot="actions"><button>Share</button></div>
+</shreddit-post>
+<shreddit-comment-tree>
+<shreddit-comment author="carol_c" depth="0" permalink="/r/gaming/comments/abc123/_/c1/" thingid="t1_c1">
+  <div slot="commentMeta"><a href="/user/carol_c">carol_c</a> <time>3 hr. ago</time></div>
+  <div slot="comment"><p>Top-level comment: skip it, spoilers inside.</p></div>
+  <div slot="actions"><button>Reply</button><button>Share</button></div>
+  <shreddit-comment author="dave_d" depth="1" permalink="/r/gaming/comments/abc123/_/c2/" thingid="t1_c2" slot="children">
+    <div slot="commentMeta"><a href="/user/dave_d">dave_d</a></div>
+    <div slot="comment"><p>Nested child reply text.</p></div>
+    <div slot="actions"><button>Reply</button></div>
+  </shreddit-comment>
+</shreddit-comment>
+</shreddit-comment-tree>
+</main>
+
+<div id="old-site-table" class="sitetable linklisting">
+  <div class="thing link" data-author="OldTimer" data-permalink="/r/old/comments/xyz789/old_title/" data-fullname="t3_xyz789">
+    <div class="entry"><p class="title"><a class="title" href="https://example.com/a">Old reddit post title</a> <span class="domain">(example.com)</span></p>
+      <p class="tagline">submitted 3 hours ago by <a class="author" href="/user/OldTimer">OldTimer</a></p>
+      <ul class="flat-list buttons"><li><a class="comments" href="/r/old/comments/xyz789/">12 comments</a></li><li>share</li></ul>
+      <div class="expando"><form><div class="usertext-body"><div class="md"><p>Old reddit self text body.</p></div></div></form></div></div>
+  </div>
+  <div class="thing comment" data-author="OldCommenter" data-permalink="/r/old/comments/xyz789/old_title/k1/">
+    <div class="entry"><p class="tagline"><a class="author">OldCommenter</a> 5 points</p>
+      <form class="usertext"><div class="usertext-body"><div class="md"><p>Old parent comment.</p></div></div></form>
+      <ul class="flat-list buttons"><li>reply</li><li>permalink</li></ul></div>
+    <div class="child"><div class="sitetable listing">
+      <div class="thing comment" data-author="ChildGuy" data-permalink="/r/old/comments/xyz789/old_title/k2/">
+        <div class="entry"><form class="usertext"><div class="usertext-body"><div class="md"><p>Old child comment.</p></div></div></form></div>
+      </div></div></div>
+  </div>
+</div>
+
+<div id="search-results">
+  <search-telemetry-tracker view-type="search_post">
+    <div data-testid="search-post-unit">
+      <a data-testid="post-title" href="/r/GTA6/comments/s1/search_hit_title/"><span>Search hit title about GTA</span></a>
+      <div data-testid="post-content">Search preview snippet text.</div>
+      <a href="/user/searcher">u/searcher</a> <faceplate-timeago>1y ago</faceplate-timeago>
+    </div>
+  </search-telemetry-tracker>
+</div>
+</shreddit-app>
+</body></html>

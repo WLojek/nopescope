@@ -1,0 +1,24 @@
+{
+  "name": "basal-web",
+  "version": "0.1.0",
+  "description": "Run basal decision models (rkinas/basal, prompt format 2) in the browser with WebGPU",
+  "type": "module",
+  "license": "Apache-2.0",
+  "main": "src/basal-web.js",
+  "scripts": {
+    "test": "node test/run.mjs"
+  },
+  "dependencies": {
+    "@huggingface/tokenizers": "^0.2.0",
+    "onnxruntime-web": "^1.31.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.65.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WLojek/nopescope"
+  },
+  "homepage": "https://github.com/WLojek/nopescope"
+}

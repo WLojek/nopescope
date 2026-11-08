@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.zip
+models
+models-web/
+extension/test/images
+extension/test/screens/
+basal-web/test/page.bundle.js
+eval/results-*.json
+.DS_Store
+__pycache__/
