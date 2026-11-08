@@ -28,7 +28,8 @@ for (const f of ["ort-wasm-simd-threaded.asyncify.mjs", "ort-wasm-simd-threaded.
 }
 
 // scripts
-const common = { bundle: true, logLevel: "warning", target: "chrome124", legalComments: "none" };
+// ../basal-web is bundled from source: resolve its dependencies from this package's node_modules
+const common = { bundle: true, logLevel: "warning", target: "chrome124", legalComments: "none", nodePaths: [path.resolve("node_modules")] };
 const jobs = [
   { ...common, entryPoints: { background: "src/background.js", offscreen: "src/offscreen.js", options: "src/options/options.js", popup: "src/popup/popup.js" }, format: "esm", outdir: out },
   { ...common, entryPoints: { content: "src/content/index.js" }, format: "iife", outdir: out },
